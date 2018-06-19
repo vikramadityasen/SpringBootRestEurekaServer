@@ -1,4 +1,4 @@
-package com.infosys.springboot.eureka.creditScore.creditScoreApplication;
+package com.infosys.springboot.eureka.creditscoreservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
