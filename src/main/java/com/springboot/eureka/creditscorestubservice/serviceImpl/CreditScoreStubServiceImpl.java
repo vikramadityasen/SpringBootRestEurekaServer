@@ -3,12 +3,12 @@ package com.springboot.eureka.creditscorestubservice.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springboot.eureka.creditscorestubservice.Util.CreditScoreStubUtil;
 import com.springboot.eureka.creditscorestubservice.model.CreditDetails;
 import com.springboot.eureka.creditscorestubservice.service.CreditScoreStubService;
+import com.springboot.eureka.creditscorestubservice.util.CreditScoreStubUtil;
 
 @Service
-public class CreditScoreServiceImpl implements CreditScoreStubService {
+public class CreditScoreStubServiceImpl implements CreditScoreStubService {
 
 	@Autowired
 	CreditScoreStubUtil creditScoreStubUtil;

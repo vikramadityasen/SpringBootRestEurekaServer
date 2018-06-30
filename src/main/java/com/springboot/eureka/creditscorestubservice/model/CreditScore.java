@@ -2,18 +2,18 @@ package com.springboot.eureka.creditscorestubservice.model;
 
 public class CreditScore {
 
-	private String name;
 	private String ssn;
+	private String name;
 	private String dob;
 	private Integer score;
 
 	public CreditScore() {
 	}
 
-	public CreditScore(String name, String ssn, String dob, Integer score) {
+	public CreditScore(String ssn, String name, String dob, Integer score) {
 		super();
-		this.name = name;
 		this.ssn = ssn;
+		this.name = name;
 		this.dob = dob;
 		this.score = score;
 	}

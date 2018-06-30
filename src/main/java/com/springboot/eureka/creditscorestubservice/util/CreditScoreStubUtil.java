@@ -1,4 +1,4 @@
-package com.springboot.eureka.creditscorestubservice.Util;
+package com.springboot.eureka.creditscorestubservice.util;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,11 +15,11 @@ public class CreditScoreStubUtil {
 
 	static {
 		try {
-			creditScoreLists.put("123-45-6789", new CreditScore("vikram", "123-45-6789", "11-01-1990", 720));
-			creditScoreLists.put("123-45-7896", new CreditScore("vikram", "123-45-7896", "12-02-1991", 650));
-			creditScoreLists.put("123-45-8967", new CreditScore("vikram", "123-45-8967", "13-03-1992", 620));
-			creditScoreLists.put("123-45-9678", new CreditScore("vikram", "123-45-9678", "14-04-1993", 550));
-			creditScoreLists.put("123-45-9867", new CreditScore("vikram", "123-45-9867", "15-05-1994", 520));
+			creditScoreLists.put("123-45-6789", new CreditScore("123-45-6789","vikram", "11-01-1990", 720));
+			creditScoreLists.put("123-45-7896", new CreditScore("123-45-7896","rohit", "12-02-1991", 650));
+			creditScoreLists.put("123-45-8967", new CreditScore("123-45-8967","birju", "13-03-1992", 620));
+			creditScoreLists.put("123-45-9678", new CreditScore("123-45-9678","aditya", "14-04-1993", 550));
+			creditScoreLists.put("123-45-9867", new CreditScore("123-45-9867","ashish", "15-05-1994", 520));
 		} catch (Exception e) {
 			e.getLocalizedMessage();
 		}
