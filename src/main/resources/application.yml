@@ -1,5 +1,5 @@
 server:
-  port: 8098    #default port where the service will be started
+  port: 8099    #default port where the service will be started
  
 eureka:         #tells about the Eureka server details and its refresh time
   instance:
@@ -10,17 +10,20 @@ eureka:         #tells about the Eureka server details and its refresh time
       defaultZone: http://localhost:8761/eureka/
     healthcheck:
       enabled: true
-    lease:
+    lease: 
       duration: 5
  
+management: 
+  security: 
+    enabled: false   #disabled the spring security on the management endpoints like /env,/refresh etc.
+
 spring:    
   application:
     name: creditScoreService   #current service name to be used by the eureka server
- 
+    
 logging:
   level:
     org:
-     springframwork:
-     web: DEBUG  
-     controllers: DEBUG
-     hibernate: DEBUG
+      springframwork:
+                  web:  debug
+     

@@ -12,6 +12,12 @@ public class CreditDetails {
 	private Integer statusCode;
 	private String message;
 
+	@Override
+	public String toString() {
+		return "CreditDetails [creditScore=" + creditScore + ", creditGroup=" + creditGroup + ", statusCode="
+				+ statusCode + ", message=" + message + "]";
+	}
+
 	public CreditDetails() {
 	}
 

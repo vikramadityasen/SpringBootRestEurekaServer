@@ -7,6 +7,11 @@ public class CreditScore {
 	private String dob;
 	private Integer score;
 
+	@Override
+	public String toString() {
+		return "CreditScore [name=" + name + ", ssn=" + ssn + ", dob=" + dob + ", score=" + score + "]";
+	}
+
 	public CreditScore() {
 	}
 
