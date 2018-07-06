@@ -19,31 +19,27 @@ public class CreditScoreServiceImpl implements CreditScoreService {
 
 	@Autowired
 	CreditScoreValidator creditScoreValidator;
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(CreditScoreServiceImpl.class);
-	
+
 	@Override
 	public CreditDetails getCreditScore(String ssn, String name, String dob) {
 
 		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(EurekaConstants.STUB_API_URL)
-				.queryParam("ssn", ssn)
-				.queryParam("name", name)
-				.queryParam("dob", dob);
+				.queryParam("ssn", ssn).queryParam("name", name).queryParam("dob", dob);
 		LOGGER.debug("doStuff needed to debug - {}", builder);
 		RestTemplate restTemplate = new RestTemplate();
-		CreditDetails response = restTemplate.getForObject(builder.toUriString(),CreditDetails.class);
+		CreditDetails response = restTemplate.getForObject(builder.toUriString(), CreditDetails.class);
 		if (response.getStatusCode().equals(EurekaConstants.SUCCESS_CODE)) {
 			response.setCreditGroup(creditScoreValidator.getCreditScoreGroup(response.getCreditScore().getScore()));
 		}
 		LOGGER.debug("CreditScore Response: {}", response);
 		return response;
 	}
-	
+
 	@Bean
 	@LoadBalanced
 	public RestTemplate restTemplate() {
-	    return new RestTemplate();
+		return new RestTemplate();
 	}
 }
-
-

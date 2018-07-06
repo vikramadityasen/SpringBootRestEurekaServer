@@ -23,7 +23,6 @@ spring:
     
 logging:
   level:
-    org:
-      springframwork:
-                  web:  debug
-     
+    org.springframework.web: DEBUG
+  file: application.log
+  
